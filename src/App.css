@@ -1,0 +1,266 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 16px;
+  background: linear-gradient(135deg, #6c3ce9, #3478f6, #27c5c9);
+  background-size: 200% 200%;
+}
+
+.imc-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(30, 20, 90, 0.28);
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  height: 78px;
+  margin-bottom: 16px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #e8ddff, #d9eaff);
+  font-size: 42px;
+  box-shadow: 0 8px 20px rgba(108, 60, 233, 0.15);
+}
+
+.app-header h1 {
+  margin: 0 0 10px;
+  color: #292052;
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.app-header > p {
+  margin: 0;
+  color: #77738f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.imc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-group label {
+  color: #393253;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px 16px;
+  border: 2px solid #e9e5f5;
+  border-radius: 14px;
+  background: #faf9ff;
+  color: #292052;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s,
+    background 0.2s;
+}
+
+.form-group input::placeholder {
+  color: #aaa4bf;
+}
+
+.form-group input:focus {
+  border-color: #8257ed;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(130, 87, 237, 0.13);
+}
+
+.calculate-button {
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(100deg, #773de7, #4778f5);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 9px 20px rgba(104, 69, 224, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.calculate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 13px 25px rgba(104, 69, 224, 0.32);
+}
+
+.calculate-button:active {
+  transform: scale(0.98);
+}
+
+.calculate-button:focus-visible {
+  outline: 3px solid #a998ff;
+  outline-offset: 4px;
+}
+
+.error {
+  margin: -8px 0 0;
+  padding: 12px;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  background: #fff1f2;
+  color: #be123c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.result-section {
+  margin-top: 28px;
+}
+
+.result-placeholder,
+.result-card {
+  padding: 25px 20px;
+  border: 1px solid #e9e5f5;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f8f5ff, #f0f7ff);
+  text-align: center;
+}
+
+.result-icon {
+  display: inline-block;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.result-placeholder p {
+  margin: 5px 0 0;
+  color: #77738f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.result-label {
+  margin: 0 0 8px;
+  color: #77738f;
+  font-size: 14px;
+}
+
+.imc-value {
+  margin: 0 0 16px;
+  background: linear-gradient(100deg, #773de7, #3478f6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.2;
+}
+
+.category {
+  display: inline-block;
+  padding: 9px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.category-bajo-peso {
+  color: #2459b4;
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+}
+
+.category-normal {
+  color: #08784b;
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+}
+
+.category-sobrepeso {
+  color: #a35408;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+}
+
+.category-obesidad {
+  color: #be123c;
+  background: #ffe4e6;
+  border: 1px solid #fecdd3;
+}
+
+.result-description {
+  margin: 17px 0 0;
+  color: #393253;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.result-note {
+  margin: 16px 0 0;
+  color: #89849e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.app-footer {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.app-footer p {
+  margin: 0;
+  color: #9791ad;
+  font-size: 11px;
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 20px 12px;
+  }
+
+  .imc-card {
+    padding: 26px 20px;
+    border-radius: 23px;
+  }
+
+  .app-header h1 {
+    font-size: 25px;
+  }
+
+  .header-icon {
+    width: 68px;
+    height: 68px;
+    font-size: 36px;
+  }
+
+  .imc-value {
+    font-size: 48px;
+  }
+}
